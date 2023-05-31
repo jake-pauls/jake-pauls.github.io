@@ -1,0 +1,21 @@
+{
+  "name": "jakepauls.dev",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/svelte": "^2.2.0",
+    "astro": "^2.5.0",
+    "svelte": "^3.54.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8",
+    "prettier-plugin-astro": "^0.9.1"
+  }
+}
