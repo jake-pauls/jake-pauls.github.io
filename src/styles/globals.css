@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Morganite;
+  src: url("/fonts/Morganite-Bold.ttf") format("truetype");
+  src: url("/fonts/Morganite-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Morganite;
+  src: url("/fonts/Morganite-BoldItalic.ttf") format("truetype");
+  src: url("/fonts/Morganite-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@layer components {
+  .tw-font-morganite {
+    font-family: "Morganite", "Segoe UI";
+    font-style: italic;
+  }
+}
