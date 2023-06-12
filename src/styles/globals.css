@@ -52,8 +52,3 @@ code {
   font-family: "JetBrains Mono", Menlo, Monaco, Lucida Console, Liberation Mono,
     DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
 }
-
-/* https://css-tricks.com/adding-shadows-to-svg-icons-with-css-and-svg-filters/ */
-svg {
-  filter: drop-shadow(3px 2px 2px rgb(0 0 0 / 0.4));
-}
