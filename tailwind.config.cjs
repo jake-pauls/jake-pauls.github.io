@@ -5,10 +5,11 @@ module.exports = {
   darkMode: "class",
   theme: {
     colors: {
-      white: "#E8E8E8",
+      white: "#e8e8e8",
       black: "#151515",
-      grey: "#A1A1A1",
-      lightning: "#F8BD00",
+      grey: "#a1a1a1",
+      cobalt: "#1d232a",
+      lightning: "#f8bd00",
     },
     extend: {
       spacing: {
@@ -20,5 +21,8 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  daisyui: {
+    logs: false,
+  },
 };

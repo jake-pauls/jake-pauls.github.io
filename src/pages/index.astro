@@ -1,15 +1,15 @@
 ---
-import "../styles/globals.css";
-import Layout from "../layouts/Layout.astro";
+import Basic from "@layouts/Basic.astro";
 ---
 
-<Layout title="Jake Pauls">
+<Basic title="Jake Pauls">
   <main>
     <!-- todo: create lightning/name component -->
-    <h1 class="tw-font-morganite tw-text-6xl">Jake Pauls</h1>
-    <h3>Core Technology Programmer</h3>
+    <h1 class="tw-font-heading tw-text-6xl">Jake Pauls</h1>
+    <h3 class="tw-text-white">Graphics Programmer</h3>
+    <code class="tw-font-code tw-text-white">This is a code block!</code>
   </main>
-</Layout>
+</Basic>
 
 <style>
   main {

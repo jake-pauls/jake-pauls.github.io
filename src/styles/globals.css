@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom Fonts (/public/fonts) */
 @font-face {
   font-family: Morganite;
   src: url("/fonts/Morganite-Bold.ttf") format("truetype");
@@ -18,9 +19,41 @@
   font-style: italic;
 }
 
+/* Custom Tailwind Components */
 @layer components {
-  .tw-font-morganite {
-    font-family: "Morganite", "Segoe UI";
+  .tw-font-heading {
+    font-family: "Morganite", "Segoe UI", sans-serif;
     font-style: italic;
   }
+
+  .tw-font-core {
+    font-family: "Inter", sans-serif;
+  }
+
+  .tw-font-code {
+    font-family: "JetBrains Mono", monospace;
+  }
+}
+
+/* Custom CSS */
+* {
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  padding: 1rem;
+  line-height: 1.5;
+}
+
+code {
+  font-family: "JetBrains Mono", Menlo, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+/* https://css-tricks.com/adding-shadows-to-svg-icons-with-css-and-svg-filters/ */
+svg {
+  filter: drop-shadow(3px 2px 2px rgb(0 0 0 / 0.4));
 }

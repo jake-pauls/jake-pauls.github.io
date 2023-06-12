@@ -1,4 +1,12 @@
 ---
+import "@fontsource/inter";
+import "@fontsource/jetbrains-mono";
+import "@styles/globals.css";
+
+import Navbar from "@components/Navbar.astro";
+import Footer from "@components/Footer.astro";
+import IconBar from "@components/IconBar.svelte";
+
 export interface Props {
   title: string;
 }
@@ -16,23 +24,14 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
-    <!-- todo: move navbar to component -->
-    <nav>
-      <a href="#">home</a>
-      <a href="#">resume</a>
-      <a href="#">dark</a>
-    </nav>
-    <slot />
+  <body class="tw-flex tw-flex-col">
+    <div class="tw-w-full">
+      <Navbar />
+    </div>
+    <div>
+      <slot />
+    </div>
+    <IconBar />
+    <Footer />
   </body>
-  <!-- todo: move footer to component -->
-  <footer>
-    <p>This is a footer.</p>
-  </footer>
 </html>
-<style is:global>
-  code {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-  }
-</style>
