@@ -4,6 +4,9 @@
 
   /** @type {string} CSS string for the size of the icons, passed directly to the `IconButton` component */
   export let size = "2.25rem";
+
+  /** @type {boolean} Determines if the buttons used are ghost buttons, passed directly to the `IconButton` component */
+  export let isGhost = false;
 </script>
 
 <!--
@@ -14,8 +17,8 @@ Set of icon buttons fixed at the bottom left corner of the site.
     <SocialIconBar size={"1em"} />
     ```
 -->
-<div class="tw-flex tw-content-start tw-space-x-4">
+<div class="tw-flex tw-content-start tw-space-x-3">
   {#each socialIconMap.entries() as [name, {src, href}]}
-    <IconButton {src} {href} {size} isGhost={false} />
+    <IconButton {src} {href} {size} {isGhost} />
   {/each}
 </div>
