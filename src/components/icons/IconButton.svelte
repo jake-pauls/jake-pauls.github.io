@@ -4,14 +4,21 @@
   /** Source of the icon from 'svelte-icons-pack' */
   export let src = undefined;
 
-  /** Size of the underlying icon */
+  /** Size of the icon */
   export let size = "2.55em";
+
+  /** Color of the icon, expects the tailwind class definition */
+  export let color = "white";
+  let twColor = "tw-fill-" + color;
 
   /** Sets an href value, converting the button to a link */
   export let href = "";
 
   /** Determines whether the link opens in a new tab */
   export let isExternal = true;
+
+  /** Determines whether this button is a ghost button (applies a hover effect) */
+  export let isGhost = true;
 
   /** Provides class overrides for the icon */
   let className = "";
@@ -34,11 +41,19 @@ An Icon Button that wraps a 'svelte-icons-pack' icon, provides routing to a part
   target={href && isExternal ? "_blank" : undefined}
   {...$$restProps}
 >
-  <Icon
-    {src}
-    {size}
-    className="tw-fill-white tw-btn-ghost tw-rounded-2xl tw-p-1.5"
-  />
+  {#if isGhost}
+    <Icon
+      {src}
+      {size}
+      className="tw-btn-ghost tw-rounded-2xl tw-p-1.5 {twColor}"
+    />
+  {:else}
+    <Icon
+      {src}
+      {size}
+      className="tw-p-1.5 {twColor}"
+    />
+  {/if}
   <slot />
 </svelte:element>
 

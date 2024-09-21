@@ -2,28 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom Fonts (/public/fonts) */
-@font-face {
-  font-family: Morganite;
-  src: url("/fonts/Morganite-Bold.ttf") format("truetype");
-  src: url("/fonts/Morganite-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Morganite;
-  src: url("/fonts/Morganite-BoldItalic.ttf") format("truetype");
-  src: url("/fonts/Morganite-BoldItalic.woff") format("woff");
-  font-weight: bold;
-  font-style: italic;
-}
-
 /* Custom Tailwind Components */
 @layer components {
   .tw-font-heading {
-    font-family: "Morganite", "Segoe UI", sans-serif;
+    font-family: "Chivo", "Segoe UI", sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.25px;
+  }
+
+  .tw-font-subheading {
+    font-family: "Chivo", "Segoe UI", sans-serif;
+    font-weight: bold;
     font-style: italic;
+    letter-spacing: 2.4px;
+  }
+
+  .tw-font-core-bold {
+    font-family: "Inter", "Segoe UI", sans-serif;
+    font-weight: bold;
   }
 
   .tw-font-core {
@@ -49,6 +45,14 @@ body {
 }
 
 code {
-  font-family: "JetBrains Mono", Menlo, Monaco, Lucida Console, Liberation Mono,
-    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  font-family:
+    "JetBrains Mono",
+    Menlo,
+    Monaco,
+    Lucida Console,
+    Liberation Mono,
+    DejaVu Sans Mono,
+    Bitstream Vera Sans Mono,
+    Courier New,
+    monospace;
 }

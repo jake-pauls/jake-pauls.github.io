@@ -1,12 +1,14 @@
 ---
 import "@fontsource/inter";
-import "@fontsource/inter/700.css";
+import "@fontsource/inter/700.css"
+import "@fontsource/chivo/700.css"
+import "@fontsource/chivo/700-italic.css"
 import "@fontsource/jetbrains-mono";
 import "@styles/globals.css";
 
 import Navbar from "@components/core/Navbar.astro";
 import Footer from "@components/core/Footer.astro";
-import IconBar from "@components/icons/IconBar.svelte";
+import IconBar from "@components/icons/FloatingIconBar.svelte";
 
 export interface Props {
   title: string;
@@ -16,7 +18,7 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -25,14 +27,16 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="tw-flex tw-flex-col">
-    <div class="tw-w-full">
-      <Navbar />
-    </div>
-    <div>
-      <slot />
-    </div>
-    <IconBar />
-    <Footer />
+  <body class="tw-bg-base-100">
+    <div class="tw-flex tw-flex-col tw-px-12 tw-pt-12">
+      <div class="tw-w-full">
+        <Navbar />
+      </div>
+      <div>
+        <slot />
+      </div>
+      <IconBar />
+      <Footer />
+      </div>
   </body>
 </html>

@@ -1,22 +1,23 @@
 ---
-import Logo from "@components/Logo.svelte";
+import { BsLightningChargeFill } from "svelte-icons-pack/bs";
+
+import IconButton from "@components/icons/IconButton.svelte";
 import { links } from "@data/links";
 ---
 
 <div class="tw-flex">
-  <div class="tw-navbar tw-bg-base-100">
-    <div class="tw-flex-1">
-      <!-- todo: replace with logo component -->
-      <a href="#">
-        <Logo textColor="white" subheadingTextColor="grey" />
-      </a>
+  <div class="tw-navbar tw-justify-end">
+    <div>
+      <IconButton src={BsLightningChargeFill} color="primary" isGhost={false} href="#" /> 
     </div>
-    <div class="tw-flex-none">
+    <!--
+    @note: I'll likely forget why this works, cause... CSS 🫠
+    Reference: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container#using_auto_margins_for_main_axis_alignment 
+    -->
+    <div class="tw-ml-auto">
       <ul class="md:tw-menu-horizontal md:tw-space-x-6 tw-px-1">
-        <!-- todo: add logic to underline current page -->
         <li><a href="#">about</a></li>
         <li><a href={links.resume}>resume</a></li>
-        <li></li>
       </ul>
     </div>
   </div>

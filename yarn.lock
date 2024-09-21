@@ -390,6 +390,11 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.21.5.tgz#acad351d582d157bb145535db2a6ff53dd514b5c"
   integrity sha512-tQd/1efJuzPC6rCFwEvLtci/xNFcTZknmXs98FYDfGE4wP9ClFV98nyKrzJKVPMhdDnjzLhdUyMX4PsQAPjwIw==
 
+"@fontsource/chivo@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/chivo/-/chivo-5.1.0.tgz#780f5ca83ca03b1e69ad13a0026797be227c2876"
+  integrity sha512-Vetc4pInSM59qBqnlyokn5JEGGWcnPYMLA0/WwmBqS7fePpe+5eOU1s1fMBeryxlWoVz2HXRYT6hGwIOZjRVzw==
+
 "@fontsource/inter@^5.1.0":
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-5.1.0.tgz#ab629b2c662457022d2d6a29854b8dc8ba538c47"

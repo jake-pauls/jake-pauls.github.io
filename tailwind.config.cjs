@@ -4,13 +4,6 @@ module.exports = {
   prefix: "tw-",
   darkMode: "class",
   theme: {
-    colors: {
-      white: "#e8e8e8",
-      black: "#151515",
-      grey: "#a1a1a1",
-      cobalt: "#1d232a",
-      lightning: "#f8bd00",
-    },
     extend: {
       spacing: {
         "8xl": "96rem",
@@ -23,6 +16,34 @@ module.exports = {
   },
   plugins: [require("daisyui")],
   daisyui: {
+    themes: [
+      {
+        dark: {
+          ...require("daisyui/src/theming/themes")["dark"],
+          primary: "#f8bd00",
+          "primary-focus": "#570df8",
+          "primary-content": "#171a1d",
+          secondary: "#f000b8",
+          "secondary-focus": "#bd0091",
+          "secondary-content": "#ffffff",
+          accent: "#37cdbe",
+          "accent-focus": "#2aa79b",
+          "accent-content": "#ffffff",
+          neutral: "#a1a1a1",
+          "neutral-focus": "#16181d",
+          "neutral-content": "#e8e8e8",
+          "base-100": "#171a1d",
+          "base-200": "#2a2e37",
+          "base-300": "#16181d",
+          "base-content": "#e8e8e8",
+          info: "#66c6ff",
+          success: "#87d039",
+          warning: "#e2d562",
+          error: "#ff6f6f",
+        },
+      },
+    ],
+    base: false,
     logs: false,
   },
 };

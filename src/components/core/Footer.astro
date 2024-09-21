@@ -1,8 +1,16 @@
-<footer class="tw-p-8">
+---
+import Logo from "@components/Logo.svelte";
+
+import { Constants } from "@data/constants";
+---
+
+<footer class="tw-px-32 tw-py-8 ">
   <div class="tw-flex">
-    <p class="tw-text-xs tw-text-base-content tw-ml-auto">
-      <!-- todo: decide footer style -->
-      <!-- Made with 💛 in --> &copy; {new Date().getFullYear()} &hyphen; Jake Pauls
-    </p>
+    <div class="tw-flex-1">
+      <a href="#">
+        <Logo />
+      </a>
+    </div>
+    <p class="tw-text-xs tw-text-base-content tw-ml-auto" set:html={Constants.copyright} />
   </div>
 </footer>
