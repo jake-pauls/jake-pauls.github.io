@@ -1,7 +1,7 @@
 <script>
-  import AiFillGithub from "svelte-icons-pack/ai/AiFillGithub";
-  import FaBrandsLinkedinIn from "svelte-icons-pack/fa/FaBrandsLinkedinIn";
-  import IoMail from "svelte-icons-pack/io/IoMail";
+  import { AiFillGithub } from "svelte-icons-pack/ai";
+  import { FaBrandsLinkedinIn } from "svelte-icons-pack/fa";
+  import { IoMail } from "svelte-icons-pack/io";
 
   import IconButton from "@components/icons/IconButton.svelte";
   import { links } from "@data/links";

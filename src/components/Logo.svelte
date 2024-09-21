@@ -1,6 +1,6 @@
 <script>
-  import Icon from "svelte-icons-pack/Icon.svelte";
-  import BsLightningChargeFill from "svelte-icons-pack/bs/BsLightningChargeFill";
+  import { Icon } from "svelte-icons-pack";
+  import { BsLightningChargeFill } from "svelte-icons-pack/bs";
 
   /** Color for the heading text in the logo, appends a `tw-text-` prefix */
   export let textColor = "black";

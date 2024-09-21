@@ -1,5 +1,5 @@
 <script>
-  import Icon from "svelte-icons-pack/Icon.svelte";
+  import { Icon } from "svelte-icons-pack"
 
   /** Source of the icon from 'svelte-icons-pack' */
   export let src = undefined;
