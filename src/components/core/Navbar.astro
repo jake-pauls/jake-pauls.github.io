@@ -7,18 +7,21 @@ import { links } from "@data/links";
 
 <div class="tw-flex">
   <div class="tw-navbar tw-justify-end">
-    <div>
-      <IconButton src={BsLightningChargeFill} color="primary" isGhost={false} href="#" /> 
-    </div>
+    <IconButton src={BsLightningChargeFill} color="yellow" isGhost={false} href="#" /> 
     <!--
     @note: I'll likely forget why this works, cause... CSS 🫠
     Reference: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container#using_auto_margins_for_main_axis_alignment 
     -->
     <div class="tw-ml-auto">
-      <ul class="md:tw-menu-horizontal md:tw-space-x-6 tw-px-1">
-        <li><a href="#">about</a></li>
+      <ul class="md:tw-menu-horizontal md:tw-space-x-4">
         <li><a href={links.resume}>resume</a></li>
       </ul>
     </div>
   </div>
 </div>
+
+<style>
+  a:hover {
+    text-decoration: underline;
+  }
+</style>

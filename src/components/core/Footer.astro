@@ -1,16 +1,23 @@
 ---
+import SocialIconBar from "@components/icons/SocialIconBar.svelte";
 import Logo from "@components/Logo.svelte";
 
 import { Constants } from "@data/constants";
 ---
 
-<footer class="tw-px-32 tw-py-8 ">
-  <div class="tw-flex">
+<footer class="tw-px-32 tw-py-8">
+  <div class="tw-flex tw-items-end">
     <div class="tw-flex-1">
-      <a href="#">
-        <Logo />
-      </a>
+      <Logo showLocation={true} />
+      <div class="tw-mt-6">
+        <SocialIconBar size="1.25rem" />
+      </div>
     </div>
-    <p class="tw-text-xs tw-text-base-content tw-ml-auto" set:html={Constants.copyright} />
+    <div>
+      <p
+        class="tw-text-xs tw-text-base-content tw-ml-auto"
+        set:html={Constants.copyright}
+      />
+    </div>
   </div>
 </footer>

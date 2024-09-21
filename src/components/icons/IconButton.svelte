@@ -1,23 +1,26 @@
 <script>
-  import { Icon } from "svelte-icons-pack"
+  import { Icon } from "svelte-icons-pack";
 
-  /** Source of the icon from 'svelte-icons-pack' */
+  /** @type {IconType} Source of the icon from 'svelte-icons-pack' */
   export let src = undefined;
 
-  /** Size of the icon */
+  /** @type {string} Size of the icon using a CSS size string */
   export let size = "2.55em";
 
-  /** Color of the icon, expects the tailwind class definition */
+  /** @type {string} Color of the icon, expects the tailwind class definition */
   export let color = "white";
-  let twColor = "tw-fill-" + color;
+  const colorVariants = {
+    white: "tw-fill-base-content",
+    yellow: "tw-fill-primary",
+  };
 
-  /** Sets an href value, converting the button to a link */
+  /** @type {string} Sets an href value, converting the button to a link */
   export let href = "";
 
-  /** Determines whether the link opens in a new tab */
+  /** @type {boolean} Determines whether the link opens in a new tab */
   export let isExternal = true;
 
-  /** Determines whether this button is a ghost button (applies a hover effect) */
+  /** @type {boolean} Determines whether this button is a ghost button (applies a hover effect) */
   export let isGhost = true;
 
   /** Provides class overrides for the icon */
@@ -30,7 +33,7 @@
 An Icon Button that wraps a 'svelte-icons-pack' icon, provides routing to a particular link on click.
 - Usage:
     ```jsx
-    <IconButton src={SvelteIcon} size=1em href="#" class=""/>
+    <IconButton src={SvelteIcon} size={"1em"} color="white" href="#" class=""/>
     ```
 -->
 <svelte:element
@@ -45,14 +48,10 @@ An Icon Button that wraps a 'svelte-icons-pack' icon, provides routing to a part
     <Icon
       {src}
       {size}
-      className="tw-btn-ghost tw-rounded-2xl tw-p-1.5 {twColor}"
+      className="tw-btn-ghost tw-rounded-xl tw-p-1.5 {colorVariants[color]}"
     />
   {:else}
-    <Icon
-      {src}
-      {size}
-      className="tw-p-1.5 {twColor}"
-    />
+    <Icon {src} {size} className={colorVariants[color]} />
   {/if}
   <slot />
 </svelte:element>
