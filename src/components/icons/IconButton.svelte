@@ -1,4 +1,5 @@
 <script>
+  import { string } from "astro:schema";
   import { Icon } from "svelte-icons-pack";
 
   /** @type {IconType} Source of the icon from 'svelte-icons-pack' */
@@ -14,14 +15,16 @@
     yellow: "tw-fill-primary",
   };
 
+  /** @type {string} Text in the tooltip of the icon button */
+  export let tooltipText = "";
+  const tooltipClass =
+    tooltipText !== "" ? "tw-tooltip tw-tooltip-primary" : "";
+
   /** @type {string} Sets an href value, converting the button to a link */
   export let href = "";
 
   /** @type {boolean} Determines whether the link opens in a new tab */
   export let isExternal = true;
-
-  /** @type {boolean} Determines whether this button is a ghost button (applies a hover effect) */
-  export let isGhost = true;
 
   /** Provides class overrides for the icon */
   let className = "";
@@ -33,7 +36,7 @@
 An Icon Button that wraps a 'svelte-icons-pack' icon, provides routing to a particular link on click.
 - Usage:
     ```jsx
-    <IconButton src={SvelteIcon} size={"1em"} color="white" href="#" class=""/>
+    <IconButton src={SvelteIcon} size={"1em"} color="white" tooltipText="Svelte" href="#" isExternal={false} class=""/>
     ```
 -->
 <svelte:element
@@ -44,16 +47,9 @@ An Icon Button that wraps a 'svelte-icons-pack' icon, provides routing to a part
   target={href && isExternal ? "_blank" : undefined}
   {...$$restProps}
 >
-  {#if isGhost}
-    <Icon
-      {src}
-      {size}
-      className="tw-btn-ghost tw-rounded-xl tw-p-1.5 {colorVariants[color]}"
-    />
-  {:else}
+  <div class={tooltipClass} data-tip={tooltipText}>
     <Icon {src} {size} className={colorVariants[color]} />
-  {/if}
-  <slot />
+  </div>
 </svelte:element>
 
 <style>
