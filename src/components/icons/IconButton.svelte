@@ -1,5 +1,4 @@
 <script>
-  import { string } from "astro:schema";
   import { Icon } from "svelte-icons-pack";
 
   /** @type {IconType} Source of the icon from 'svelte-icons-pack' */

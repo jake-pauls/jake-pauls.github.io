@@ -12,8 +12,8 @@ type IconData = {
 
 /** Social icons used across the site, each name is mapped to a corresponding `IconData` */
 export const socialIconMap: Map<string, IconData> = new Map([
-  ["github", { src: AiFillGithub, href: links.github }],
-  ["linkedin", { src: FaBrandsLinkedinIn, href: links.linkedin }],
-  ["email", { src: IoMail, href: links.email }],
-  ["resume", { src: AiOutlinePaperClip, href: links.resume }],
+  ["GitHub", { src: AiFillGithub, href: links.github }],
+  ["LinkedIn", { src: FaBrandsLinkedinIn, href: links.linkedin }],
+  ["Email", { src: IoMail, href: links.email }],
+  ["Resume", { src: AiOutlinePaperClip, href: links.resume }],
 ]);

@@ -1,22 +1,35 @@
 ---
 import SocialIconBar from "@components/icons/SocialIconBar.svelte";
+import FadedDivider from "@components/ui/FadedDivider.svelte";
 ---
 
 <!-- 
 TODO: Play with this margin-bottom number, it'll push the content below the hero page if we want 
 -->
 <div class="tw-mb-40">
-  <div class="tw-my-6">
-    <p class="tw-font-core-bold tw-text-6xl tw-text-base-content">
-      Hello, I'm Jake. 👋
-    </p>
+  <div class="tw-flex">
+    <div class="tw-flex tw-flex-col">
+      <div class="tw-my-6">
+        <p class="tw-font-core-bold tw-text-6xl tw-text-base-content">
+          Hello, I'm Jake. 👋
+        </p>
+      </div>
+      <div class="tw-my-6">
+        <p class="tw-font-core tw-text-4xl tw-text-base-content">
+          I&apos;m a game engine programmer based in Québec City and Vancouver.
+        </p>
+      </div>
+      <div class="tw-mt-12 tw-mb-3">
+        <SocialIconBar size="2rem" showTooltips={true} class="tw-space-x-8" />
+      </div>
+    </div>
+    <div class="tw-avatar tw-self-center tw-ml-8">
+      <div class="tw-rounded-full tw-object-contain tw-w-64 tw-h-64">
+        <img
+          src="https://avatars.githubusercontent.com/u/48817786?v=4"
+        />
+      </div>
+    </div>
   </div>
-  <div class="tw-my-6">
-    <p class="tw-font-core tw-text-4xl tw-text-base-content">
-      I&apos;m a game engine programmer based in Québec City and Vancouver.
-    </p>
-  </div>
-  <div class="tw-mt-12 tw-mb-3">
-    <SocialIconBar size="2rem" showTooltips={true} class="tw-space-x-8" />
-  </div>
+  <FadedDivider />
 </div>
