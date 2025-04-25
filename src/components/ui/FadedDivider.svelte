@@ -1,3 +1,11 @@
+<!--
+@component
+A styled horizontal rule that looks like a divider faded on both ends.
+- Usage:
+    ```jsx
+    <FadedDivider />
+    ```
+-->
 <div class="tw-m-32">
   <hr />
 </div>
