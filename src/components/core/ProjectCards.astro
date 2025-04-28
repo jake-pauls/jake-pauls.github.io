@@ -19,8 +19,8 @@ const projects = [
     <!-- TODO: Might be worth making a ProjectCard svelte component, however, this is significantly easier because of the Astro image API-->
     {projects.map((project) =>
       <a href={project.link} target="_blank" class="project-link tw-tooltip tw-tooltip-accent" data-tip={project.title + " - " + project.role}>
-        <div class="tw-flex tw-items-center tw-justify-center tw-bg-accent tw-rounded-lg tw-shadow-md tw-aspect-square tw-p-4">
-          <Image src={project.icon} alt={project.title} class="project-image tw-object-contain tw-h-full tw-w-full">
+        <div class="tw-flex tw-items-center tw-justify-center tw-bg-accent tw-rounded-lg tw-shadow-md tw-aspect-square tw-p-4 tw-h-full tw-w-full">
+          <Image src={project.icon} alt={project.title} loading="eager" class="project-image tw-object-contain tw-h-full tw-w-full">
         </div>
       </a>
     )}

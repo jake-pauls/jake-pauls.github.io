@@ -47,7 +47,7 @@ An Icon Button that wraps a 'svelte-icons-pack' icon, provides routing to a part
   {...$$restProps}
 >
   <div class={tooltipClass} data-tip={tooltipText}>
-    <Icon {src} {size} className={colorVariants[color]} />
+    <Icon {src} {size} title={href} className={colorVariants[color]} />
   </div>
 </svelte:element>
 
