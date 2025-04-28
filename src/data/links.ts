@@ -16,6 +16,7 @@ export const personalLinks: PersonalLinks = {
   linkedin: "https://linkedin.com/in/jake-pauls",
   email: "mailto:jakepauls99@gmail.com",
   itchio: "https://jake-pauls.itch.io/",
+  larian: "https://quebec.larian.com/",
 };
 
 /** Project links used across the site */
