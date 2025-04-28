@@ -11,7 +11,7 @@ type ProjectLinks = {
 };
 
 /** Personal links used across the site */
-export const links: PersonalLinks = {
+export const personalLinks: PersonalLinks = {
   github: "https://github.com/jake-pauls",
   linkedin: "https://linkedin.com/in/jake-pauls",
   email: "mailto:jakepauls99@gmail.com",

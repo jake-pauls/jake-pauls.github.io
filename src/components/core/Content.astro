@@ -1,8 +1,11 @@
 ---
 import ProjectCards from "@components/core/ProjectCards.astro";
 
+import Link from "@components/Link.svelte";
 import SocialIconBar from "@components/icons/SocialIconBar.svelte";
 import IconButton from "@components/icons/IconButton.svelte";
+
+import { personalLinks } from "@data/links.ts";
 
 import { BsLightningChargeFill } from "svelte-icons-pack/bs";
 ---
@@ -32,7 +35,7 @@ import { BsLightningChargeFill } from "svelte-icons-pack/bs";
   <ProjectCards />
   <div class="tw-my-2">
     <p class="tw-font-core tw-text-lg md:tw-text-xl tw-text-base-content">
-      in my free time i make games and participate in game jams. feel free to check out my itch or github for those.
+      in my free time i make games and participate in game jams. feel free to check out my <Link href={personalLinks.itchio}>itch</Link> or <Link href={personalLinks.github}>github</Link> for those.
     </p>
   </div>
 </section>
