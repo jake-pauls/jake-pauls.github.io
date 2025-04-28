@@ -1,0 +1,39 @@
+---
+import { Image } from "astro:assets";
+
+import bg3Icon from "@assets/bg3_icon.png";
+import bg3FullIcon from "@assets/bg3_full_icon.png";
+import nightingaleIcon from "@assets/nightingale_icon.png";
+
+import { projectLinks } from "@data/links.ts";
+
+const projects = [
+    { title: "Baldur's Gate 3", role: "Junior Tools Programmer", icon: bg3Icon, link: projectLinks.bg3 },
+    { title: "Nightingale", role: "Systems Programmer Intern", icon: nightingaleIcon, link: projectLinks.nightingale },
+    { title: "Baldur's Gate 3", role: "Tools Programmer Intern", icon: bg3FullIcon, link: projectLinks.bg3 },
+]
+---
+
+<section class="tw-flex tw-items-center tw-justify-center md:tw-justify-start tw-py-4">
+  <div class="tw-grid tw-grid-cols-4 tw-gap-4 tw-max-w-sm tw-w-full tw-h-full">
+        {projects.map((project) =>
+        <!-- TODO: Might be worth making a ProjectCard svelte component, however, this is significantly easier because of the Astro image API-->
+        <a href={project.link} target="_blank" class="project-link tw-tooltip tw-tooltip-accent" data-tip={project.title + " - " + project.role}>
+          <div class="tw-flex tw-items-center tw-justify-center tw-bg-accent tw-rounded-lg tw-shadow-md tw-aspect-square tw-p-4">
+                <Image src={project.icon} alt={project.title} class="project-image tw-object-contain tw-h-full tw-w-full">
+          </div>
+        </a>
+        )}
+  </div>
+</section>
+
+<style>
+.project-link {
+  outline: none;
+  border: none;
+}
+
+.project-image {
+    filter: drop-shadow(0 2.25px 2.25px rgba(0,0,0,0.65));
+}
+</style>

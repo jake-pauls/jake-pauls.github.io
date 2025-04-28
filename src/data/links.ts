@@ -1,14 +1,25 @@
-type Links = {
+type PersonalLinks = {
   github: string;
   linkedin: string;
   email: string;
-  resume: string;
+  itchio: string;
 };
 
-/** Links used across the site */
-export const links: Links = {
+type ProjectLinks = {
+  bg3: string;
+  nightingale: string;
+};
+
+/** Personal links used across the site */
+export const links: PersonalLinks = {
   github: "https://github.com/jake-pauls",
   linkedin: "https://linkedin.com/in/jake-pauls",
   email: "mailto:jakepauls99@gmail.com",
-  resume: "#",
+  itchio: "https://jake-pauls.itch.io/",
+};
+
+/** Project links used across the site */
+export const projectLinks: ProjectLinks = {
+  bg3: "https://baldursgate3.game/",
+  nightingale: "https://playnightingale.com/",
 };

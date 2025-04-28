@@ -5,19 +5,7 @@ import Logo from "@components/Logo.svelte";
 import { Constants } from "@data/constants";
 ---
 
-<footer class="tw-px-32 tw-py-8">
-  <div class="tw-flex tw-items-end">
-    <div class="tw-flex-1">
-      <Logo showLocation={true} />
-      <div class="tw-mt-6">
-        <SocialIconBar size="1.25rem" class="tw-space-x-4" />
-      </div>
-    </div>
-    <div>
-      <p
-        class="tw-text-xs tw-text-base-content tw-ml-auto"
-        set:html={Constants.copyright}
-      />
-    </div>
-  </div>
+<footer class="tw-flex tw-justify-between tw-items-center tw-w-full">
+  <SocialIconBar size="1.25rem" showTooltips={true} class="tw-space-x-4" />
+  <p class="tw-text-xs tw-text-base-content" set:html={Constants.copyright} />
 </footer>

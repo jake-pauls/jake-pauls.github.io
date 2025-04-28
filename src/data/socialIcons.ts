@@ -1,5 +1,5 @@
 import { AiFillGithub, AiOutlinePaperClip } from "svelte-icons-pack/ai";
-import { FaBrandsLinkedinIn } from "svelte-icons-pack/fa";
+import { FaBrandsLinkedinIn, FaBrandsItchIo } from "svelte-icons-pack/fa";
 import { IoMail } from "svelte-icons-pack/io";
 
 import { links } from "./links";
@@ -15,5 +15,5 @@ export const socialIconMap: Map<string, IconData> = new Map([
   ["GitHub", { src: AiFillGithub, href: links.github }],
   ["LinkedIn", { src: FaBrandsLinkedinIn, href: links.linkedin }],
   ["Email", { src: IoMail, href: links.email }],
-  ["Resume", { src: AiOutlinePaperClip, href: links.resume }],
+  ["ItchIo", { src: FaBrandsItchIo, href: links.itchio }],
 ]);

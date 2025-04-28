@@ -12,6 +12,19 @@ module.exports = {
       borderRadius: {
         "4xl": "2rem",
       },
+      animation: {
+        wiggle: "wiggle 1s ease-in-out infinite",
+      },
+      keyframes: {
+        wiggle: {
+          "0%": { transform: "rotate(0deg)" },
+          "5%": { transform: "rotate(-6deg)" },
+          "10%": { transform: "rotate(2deg)" },
+          "15%": { transform: "rotate(4deg)" },
+          "20%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(0deg)" },
+        },
+      },
     },
   },
   plugins: [require("daisyui")],
@@ -26,7 +39,7 @@ module.exports = {
           secondary: "#f000b8",
           "secondary-focus": "#bd0091",
           "secondary-content": "#ffffff",
-          accent: "#37cdbe",
+          accent: "#3b3948",
           "accent-focus": "#2aa79b",
           "accent-content": "#ffffff",
           neutral: "#a1a1a1",

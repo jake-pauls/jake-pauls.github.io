@@ -4,26 +4,16 @@
 
 /* Custom Tailwind Components */
 @layer components {
-  .tw-font-heading {
-    font-family: "Chivo", "Segoe UI", sans-serif;
-    font-weight: bold;
-    letter-spacing: 0.25px;
-  }
-
-  .tw-font-subheading {
-    font-family: "Chivo", "Segoe UI", sans-serif;
-    font-weight: bold;
-    font-style: italic;
-    letter-spacing: 2.4px;
-  }
-
   .tw-font-core-bold {
     font-family: "Inter", "Segoe UI", sans-serif;
     font-weight: bold;
+    letter-spacing: -0.05em;
+    text-shadow: 0.15px 0.5px 0.25px rgba(0, 0, 0, 0.5);
   }
 
   .tw-font-core {
     font-family: "Inter", sans-serif;
+    text-shadow: 0.15px 0.5px 0.25px rgba(0, 0, 0, 0.5);
   }
 
   .tw-font-code {

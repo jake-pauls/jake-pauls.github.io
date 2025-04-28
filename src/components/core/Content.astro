@@ -1,35 +1,38 @@
 ---
+import ProjectCards from "@components/core/ProjectCards.astro";
+
 import SocialIconBar from "@components/icons/SocialIconBar.svelte";
-import FadedDivider from "@components/ui/FadedDivider.svelte";
+import IconButton from "@components/icons/IconButton.svelte";
+
+import { BsLightningChargeFill } from "svelte-icons-pack/bs";
 ---
 
-<!-- 
-TODO: Play with this margin-bottom number, it'll push the content below the hero page if we want 
--->
-<div class="tw-mb-40">
-  <div class="tw-flex">
-    <div class="tw-flex tw-flex-col">
-      <div class="tw-my-6">
-        <p class="tw-font-core-bold tw-text-6xl tw-text-base-content">
-          Hello, I'm Jake. 👋
-        </p>
-      </div>
-      <div class="tw-my-6">
-        <p class="tw-font-core tw-text-4xl tw-text-base-content">
-          I&apos;m a game engine programmer based in Québec City and Vancouver.
-        </p>
-      </div>
-      <div class="tw-mt-12 tw-mb-3">
-        <SocialIconBar size="2rem" showTooltips={true} class="tw-space-x-8" />
-      </div>
+<section class="">
+  <div class="tw-my-6">
+    <div class="tw-flex tw-items-baseline">
+      <p class="tw-font-core-bold tw-text-4xl md:tw-text-7xl">
+        hello, i'm jake.
+      </p>
+      <IconButton src={BsLightningChargeFill} size="1.25rem" color="yellow" class="tw-ml-4 tw-animate-pulse tw-animate-wiggle" />
     </div>
-    <div class="tw-avatar tw-self-center tw-ml-8">
-      <div class="tw-rounded-full tw-object-contain tw-w-64 tw-h-64">
-        <img
-          src="https://avatars.githubusercontent.com/u/48817786?v=4"
-        />
-      </div>
-    </div>
+    <p class="tw-font-core-bold tw-text-neutral tw-text-4xl md:tw-text-7xl">
+      tools programmer
+    </p>
   </div>
-  <FadedDivider />
-</div>
+  <div class="tw-my-2">
+    <p class="tw-font-core tw-text-lg md:tw-text-xl tw-text-base-content">
+      i&apos;m a tools programmer based in québec city currently working at larian studios. i&apos;m interested in game engines, creative workflows, and custom technology.
+    </p>
+  </div>
+  <div class="tw-my-2">
+    <p class="tw-font-core tw-text-lg md:tw-text-xl tw-text-base-content">
+      here are some of the cool things i&apos;ve worked on professionally:
+    </p>
+  </div>
+  <ProjectCards />
+  <div class="tw-my-2">
+    <p class="tw-font-core tw-text-lg md:tw-text-xl tw-text-base-content">
+      in my free time i make games and participate in game jams. feel free to check out my itch or github for those.
+    </p>
+  </div>
+</section>

@@ -17,7 +17,7 @@
   /** @type {string} Text in the tooltip of the icon button */
   export let tooltipText = "";
   const tooltipClass =
-    tooltipText !== "" ? "tw-tooltip tw-tooltip-primary" : "";
+    tooltipText !== "" ? "tw-tooltip tw-tooltip-accent" : "";
 
   /** @type {string} Sets an href value, converting the button to a link */
   export let href = "";
@@ -35,14 +35,14 @@
 An Icon Button that wraps a 'svelte-icons-pack' icon, provides routing to a particular link on click.
 - Usage:
     ```jsx
-    <IconButton src={SvelteIcon} size={"1em"} color="white" tooltipText="Svelte" href="#" isExternal={false} class=""/>
+    <IconButton src={SvelteIcon} size="1em" color="white" tooltipText="Svelte" href="#" isExternal={false} class=""/>
     ```
 -->
 <svelte:element
   this={href ? "a" : "button"}
   role={href ? "button" : undefined}
   href={href ? href : undefined}
-  class="icon-button {className}"
+  class="icon-button tw-drop-shadow-sm {href ? "" : "tw-pointer-events-none"} {className}"
   target={href && isExternal ? "_blank" : undefined}
   {...$$restProps}
 >
@@ -56,9 +56,5 @@ An Icon Button that wraps a 'svelte-icons-pack' icon, provides routing to a part
     outline: none;
     border: none;
     box-sizing: border-box;
-    min-inline-size: 30px;
-    min-block-size: 30px;
-    /* https://css-tricks.com/adding-shadows-to-svg-icons-with-css-and-svg-filters/ */
-    filter: drop-shadow(3px 2px 2px rgb(0 0 0 / 0.4));
   }
 </style>
