@@ -3,9 +3,11 @@ type PersonalLinks = {
   linkedin: string;
   email: string;
   itchio: string;
+  larian: string;
 };
 
 type ProjectLinks = {
+  divinity: string;
   bg3: string;
   nightingale: string;
 };
@@ -21,6 +23,7 @@ export const personalLinks: PersonalLinks = {
 
 /** Project links used across the site */
 export const projectLinks: ProjectLinks = {
+  divinity: "https://divinity.com/",
   bg3: "https://baldursgate3.game/",
   nightingale: "https://playnightingale.com/",
 };

@@ -1,12 +1,14 @@
 ---
 import { Image } from "astro:assets";
 
+import divinityIcon from "@assets/divinity_icon.png"
 import bg3Icon from "@assets/bg3_icon.png";
 import nightingaleIcon from "@assets/nightingale_icon.png";
 
 import { projectLinks } from "@data/links.ts";
 
 const projects = [
+    { title: "Divinity", icon: divinityIcon, link: projectLinks.divinity },
     { title: "Baldur's Gate 3", icon: bg3Icon, link: projectLinks.bg3 },
     { title: "Nightingale", icon: nightingaleIcon, link: projectLinks.nightingale },
 ]
