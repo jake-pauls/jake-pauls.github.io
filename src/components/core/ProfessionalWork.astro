@@ -1,0 +1,14 @@
+---
+import ProjectListWithCarousel from "@components/core/ProjectListWithCarousel.astro";
+import { professionalProjects } from "@data/professionalProjects";
+---
+
+<section class="tw-my-2 tw-py-4 tw-divide-y tw-divide-white/10">
+  <div class="tw-my-4">
+    <h2 class="tw-text-4xl tw-font-core-bold">professional work.</h2>
+    <h4 class="tw-text-xl tw-text-neutral tw-font-bold">
+      projects i've been a part of professionally.
+    </h4>
+  </div>
+  <ProjectListWithCarousel projects={professionalProjects} />
+</section>

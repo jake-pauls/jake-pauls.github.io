@@ -6,7 +6,7 @@ type PersonalLinks = {
   larian: string;
 };
 
-type ProjectLinks = {
+type ProfessionalProjectLinks = {
   divinity: string;
   bg3: string;
   nightingale: string;
@@ -21,8 +21,8 @@ export const personalLinks: PersonalLinks = {
   larian: "https://quebec.larian.com/",
 };
 
-/** Project links used across the site */
-export const projectLinks: ProjectLinks = {
+/** Professional project links used across the site */
+export const professionalProjectLinks: ProfessionalProjectLinks = {
   divinity: "https://divinity.com/",
   bg3: "https://baldursgate3.game/",
   nightingale: "https://playnightingale.com/",

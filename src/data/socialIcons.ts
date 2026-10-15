@@ -1,4 +1,4 @@
-import { AiFillGithub, AiOutlinePaperClip } from "svelte-icons-pack/ai";
+import { AiFillGithub } from "svelte-icons-pack/ai";
 import { FaBrandsLinkedinIn, FaBrandsItchIo } from "svelte-icons-pack/fa";
 import { IoMail } from "svelte-icons-pack/io";
 
