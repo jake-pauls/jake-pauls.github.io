@@ -34,8 +34,6 @@ import hamstarsImgA from "@assets/projects/hamstars/Hamstars_A.png";
 import hamstarsImgB from "@assets/projects/hamstars/Hamstars_B.png";
 
 import qcImgTitle from "@assets/projects/quality-control/QC_Title.png";
-import qcImgA from "@assets/projects/quality-control/QC_A.png";
-import qcImgB from "@assets/projects/quality-control/QC_B.png";
 
 import illumeImgTitle from "@assets/projects/illume/Illume_Title.png";
 import illumeImgA from "@assets/projects/illume/Illume_A.png";
@@ -70,7 +68,14 @@ export const personalProjects: PersonalProject[] = [
     description:
       "Created @ Global Game Jam 2026 🎭 Rhythm game inspired by Bian Lian (變臉) that's played with the expressions you make! Smile, frown, and scowl to the beat using your webcam.",
     year: "2026",
-    tags: ["Unity", "C#", "Unity Barracuda", "Python", "PyTorch"],
+    tags: [
+      "Unity",
+      "C#",
+      "Unity Barracuda",
+      "Google MediaPipe",
+      "Python",
+      "PyTorch",
+    ],
     ghLink: "https://github.com/jake-pauls/BianBeat",
     projLink: "https://globalgamejam.org/games/2026/mask-game-5",
     imageSrcs: [bianBeatImgTitle, bianBeatImgA, bianBeatImgB],
@@ -142,14 +147,14 @@ export const personalProjects: PersonalProject[] = [
     imageSrcs: [hamstarsImgTitle, hamstarsImgA, hamstarsImgB],
   },
   {
-    name: "QualityControl",
+    name: "Quality Control",
     description:
       "Endless iPhone game created in OpenGL where players are dropped into a game test environment and must survive the onslaught of obstacles thrown at them.",
     year: "2022",
     tags: ["C++", "OpenGL", "GLSL"],
     ghLink: "https://github.com/jake-pauls/quality-control",
     videoLink: "https://youtu.be/Z55qi4fPgq8",
-    imageSrcs: [qcImgTitle, qcImgA, qcImgB],
+    imageSrcs: [qcImgTitle],
   },
   {
     name: "Illume",
@@ -163,7 +168,7 @@ export const personalProjects: PersonalProject[] = [
     imageSrcs: [illumeImgTitle, illumeImgA, illumeImgB, illumeImgC, illumeImgD],
   },
   {
-    name: "FrostFire",
+    name: "Frost Fire",
     description:
       "Top-down multiplayer survival defense game where players work to defend and replenish a diminishing campfire from enraged snowmen.",
     year: "2021",

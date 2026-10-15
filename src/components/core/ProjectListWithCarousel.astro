@@ -1,6 +1,10 @@
 ---
 import { Image } from "astro:assets";
 import type { PersonalProject } from "@data/personalProjects";
+import IconButton from "@components/icons/IconButton.svelte";
+
+import { AiFillGithub, AiOutlineLink } from "svelte-icons-pack/ai";
+import { BiVideo } from "svelte-icons-pack/bi";
 
 interface Props {
   projects: PersonalProject[];
@@ -114,31 +118,30 @@ const { projects } = Astro.props;
 
             <div class="tw-mt-auto tw-flex tw-gap-5 tw-pt-6 tw-text-sm">
               {project.ghLink && (
-                <a
+                <IconButton
+                  src={AiFillGithub}
                   href={project.ghLink}
-                  target="_blank"
-                  rel="noreferrer"
-                  class="tw-text-white/65 tw-transition-colors hover:tw-text-yellow-300">
-                  GitHub
-                </a>
+                  size="1.75em"
+                  tooltipText="GitHub"
+                />
               )}
 
               {project.videoLink && (
-                <a
+                <IconButton
+                  src={BiVideo}
                   href={project.videoLink}
-                  target="_blank"
-                  rel="noreferrer"
-                  class="tw-text-white/65 tw-transition-colors hover:tw-text-yellow-300">
-                  Video
-                </a>
+                  size="1.75em"
+                  tooltipText="Video"
+                />
               )}
 
               {project.projLink && (
-                <a
+                <IconButton
+                  src={AiOutlineLink}
                   href={project.projLink}
-                  class="tw-text-white/65 tw-transition-colors hover:tw-text-yellow-300">
-                  Project
-                </a>
+                  size="1.75em"
+                  tooltipText="Project Link"
+                />
               )}
             </div>
           </div>
